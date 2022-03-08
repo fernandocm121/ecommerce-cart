@@ -1,0 +1,24 @@
+@import '../variables.sass'
+
+$breakpoint-xs: $core-breakpoint-xs-max
+$breakpoint-sm: $core-breakpoint-sm-max
+$breakpoint-md: $core-breakpoint-md-max
+$breakpoint-lg: $core-breakpoint-lg-max
+$breakpoint-xl: $core-breakpoint-xl-max
+
+// sorry for long line; we need .sass and it doesn't support multi-line list
+$sizes: ('xs': 0, 'sm': ($breakpoint-xs + 1), 'md': ($breakpoint-sm + 1), 'lg': ($breakpoint-md + 1), 'xl': ($breakpoint-lg + 1), '2xl': ($breakpoint-xl + 1) )
+
+$primary   : var(--color-primary)
+$secondary : var(--color-secondary)
+$accent    : var(--color-accent)
+
+$dark      : var(--color-dark)
+$dark-page : var(--color-dark-page)
+
+$positive  : var(--color-positive)
+$negative  : var(--color-negative)
+$info      : var(--color-info)
+$warning   : var(--color-warning)
+
+$typography-font-family: var(--font-family)

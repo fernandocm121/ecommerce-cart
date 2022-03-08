@@ -1,4 +1,5 @@
 <script setup>
+import { QBtn } from 'quasar'
 import { ref } from 'vue'
 
 defineProps({
@@ -10,7 +11,15 @@ const count = ref(0)
 
 <template>
   <h1>{{ msg }}</h1>
+  <q-btn label="poxa"></q-btn>
 
+  <div
+    un-flex
+    un-justify-center
+  >
+    <p class="bg-color-primary">Poxa Vida</p>
+  </div>
+  <q-btn color="black" text-color="black" label="Standard" />
   <p>
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
