@@ -1,10 +1,23 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+// Insere no Quasar regra para usar o icones do preset de icones do UnoCSS
+const $q = useQuasar()
+
+$q.iconMapFn = iconName => iconName.startsWith('i-') ? { cls: iconName } : undefined
+
+// Define título da página configurado nas rotas
+const route = useRoute()
+const title = ref()
+watch(
+  () => route.meta,
+  (meta) => {
+    title.value = meta.title
+  },
+)
+useHead({
+  title: computed(() => `Multiplier${title.value ? ` - ${title.value}` : ''}`),
+})
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+<router-view></router-view>
 </template>
