@@ -1,17 +1,56 @@
+<script setup>
+import useCart from '../composables/use-cart'
+
+const props = defineProps({
+  imgProps: { 
+    type: Object,
+    default: () => ({}),
+  },
+  quantity: {
+    type: Number,
+    default: 0
+  },
+  title: String
+})
+
+const { updateCart } = useCart()
+
+const quantityStock = ref(props.quantity)
+
+const updateStock = () => {
+  if (quantityStock.value < 1) return
+ 
+  quantityStock.value = quantityStock.value - 1
+  updateCart()
+}
+</script>
+
 <template>
-  <div 
-    un-bg-white
-    un-flex
-    un-flex-col
-    un-items-center
+<div 
+  un-bg-white
+  un-rounded-md
+  un-space-y-md
+>
+  <q-img 
+    fit="contain"
+    height="200px"
+    width="200px"
+    v-bind="imgProps"
+    un-max-w="md"
   >
-    <q-img 
-      src="https://www.fantoy.com.br/media/catalog/product/cache/5070b15b05522f191912dd31c57262ab/g/o/gokusupersayajinfes.jpg"
-      un-w="300px"
-    >
-    </q-img>
-    <div>
-      Goku super saiyan - fes
-    </div>
+  </q-img>
+  <div>
+    {{ title }}
   </div>
+  <q-btn 
+    label="Adicionar ao carrinho"
+    un-bg-primary
+    un-text-white
+    @click="updateStock()"
+  >
+  </q-btn>
+  <div>
+    Numero em estoque: {{ quantityStock }}
+  </div>
+</div>
 </template>

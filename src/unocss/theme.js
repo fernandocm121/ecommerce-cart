@@ -40,6 +40,7 @@ export default {
       page:     '#121212',
     },
 
+    foreground: '#edecee',
     positive:   '#21ba45',
     negative:   '#c10015',
     info:       '#0091ea',

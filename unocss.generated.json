@@ -4265,6 +4265,7 @@
               "DEFAULT": "#1d1d1d",
               "page": "#121212"
             },
+            "foreground": "#edecee",
             "positive": "#21ba45",
             "negative": "#c10015",
             "info": "#0091ea",
@@ -8780,6 +8781,7 @@
               "DEFAULT": "#1d1d1d",
               "page": "#121212"
             },
+            "foreground": "#edecee",
             "positive": "#21ba45",
             "negative": "#c10015",
             "info": "#0091ea",
@@ -10002,6 +10004,7 @@
         "primary": "#1e1e26",
         "secondary": "#FFCD00",
         "accent": "#54346F",
+        "foreground": "#edecee",
         "positive": "#21ba45",
         "negative": "#c10015",
         "info": "#0091ea",

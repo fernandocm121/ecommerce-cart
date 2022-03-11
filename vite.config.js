@@ -34,7 +34,7 @@ export default defineConfig({
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
     Layouts({
-      defaultLayout: 'private',
+      defaultLayout: 'public',
       layoutsDirs: 'src/layouts',
     }),
 

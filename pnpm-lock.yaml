@@ -23,6 +23,7 @@ specifiers:
   vite-plugin-vue-layouts: ^0.6.0
   vue: ^3.2.25
   vue-router: ^4.0.13
+  vue-sweetalert2: ^5.0.2
 
 dependencies:
   '@quasar/extras': 1.13.0
@@ -31,6 +32,7 @@ dependencies:
   unocss: 0.26.4_sass@1.32.12
   vue: 3.2.31
   vue-router: 4.0.13_vue@3.2.31
+  vue-sweetalert2: 5.0.2_vue@3.2.31
 
 devDependencies:
   '@iconify/json': 2.1.13
@@ -1459,6 +1461,10 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
+  /sweetalert2/11.4.4:
+    resolution: {integrity: sha512-9yYWQuRT1v9JNI/paPTSYV+68MHwe9C+HQ/I2jtfaFzoJgYRftWXOs4JqmDSjT7m2m4r8ebMMn8LcxD1Wq9B/w==}
+    dev: false
+
   /tinypool/0.1.2:
     resolution: {integrity: sha512-fvtYGXoui2RpeMILfkvGIgOVkzJEGediv8UJt7TxdAOY8pnvUkFg/fkvqTfXG9Acc9S17Cnn1S4osDc2164guA==}
     engines: {node: '>=14.0.0'}
@@ -1763,6 +1769,15 @@ packages:
       vue: ^3.2.0
     dependencies:
       '@vue/devtools-api': 6.0.12
+      vue: 3.2.31
+    dev: false
+
+  /vue-sweetalert2/5.0.2_vue@3.2.31:
+    resolution: {integrity: sha512-28pcpmvaFxwoXIUkOWwhZhmsV749jXxha8JicwPoSKyFKR5FhIaZU6UHO5WlUCLIVUI6sAWY6WngK2x/iXYwZg==}
+    peerDependencies:
+      vue: '*'
+    dependencies:
+      sweetalert2: 11.4.4
       vue: 3.2.31
     dev: false
 
