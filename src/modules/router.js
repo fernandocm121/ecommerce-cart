@@ -5,9 +5,9 @@ import { setupLayouts } from 'virtual:generated-layouts'
 
 const routes = setupLayouts(generatedRoutes)
 
-console.log('Route Generated :>> ', generatedRoutes);
-console.log('layout: :>> ', setupLayouts(generatedRoutes))
-console.log('routes :>> ', routes);
+// console.log('Route Generated :>> ', generatedRoutes);
+// console.log('layout: :>> ', setupLayouts(generatedRoutes))
+// console.log('routes :>> ', routes);
 
 const router = createRouter({
   history: createWebHistory(),

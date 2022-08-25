@@ -1,5 +1,6 @@
 <script setup>
 import useCart from '../composables/use-cart'
+import useMovie from '../composables/use-movie'
 
 const props = defineProps({
   imgProps: { 
@@ -12,6 +13,8 @@ const props = defineProps({
   },
   title: String
 })
+
+const movie = useMovie()
 
 const { updateCart } = useCart()
 

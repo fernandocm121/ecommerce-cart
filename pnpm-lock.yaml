@@ -9,9 +9,12 @@ specifiers:
   '@unocss/preset-icons': ^0.27.2
   '@unocss/preset-wind': ^0.27.2
   '@unocss/reset': ^0.27.2
+  '@urql/exchange-multipart-fetch': ^0.1.14
+  '@urql/vue': ^0.6.1
   '@vitejs/plugin-vue': ^2.2.0
   '@vueuse/core': ^7.7.1
   '@vueuse/head': ^0.7.5
+  graphql: ^16.3.0
   quasar: ^2.5.5
   sass: 1.32.12
   unocss: ^0.26.2
@@ -23,16 +26,17 @@ specifiers:
   vite-plugin-vue-layouts: ^0.6.0
   vue: ^3.2.25
   vue-router: ^4.0.13
-  vue-sweetalert2: ^5.0.2
 
 dependencies:
   '@quasar/extras': 1.13.0
+  '@urql/exchange-multipart-fetch': 0.1.14_graphql@16.3.0
+  '@urql/vue': 0.6.1_graphql@16.3.0+vue@3.2.31
+  graphql: 16.3.0
   quasar: 2.5.5
   sass: 1.32.12
   unocss: 0.26.4_sass@1.32.12
   vue: 3.2.31
   vue-router: 4.0.13_vue@3.2.31
-  vue-sweetalert2: 5.0.2_vue@3.2.31
 
 devDependencies:
   '@iconify/json': 2.1.13
@@ -78,6 +82,14 @@ packages:
     resolution: {integrity: sha512-7yJPvPV+ESz2IUTPbOL+YkIGyCqOyNIzdguKQuJGnH7bg1WTIifuM21YqokFt/THWh1AkCRn9IgoykTRCBVpzA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+
+  /@graphql-typed-document-node/core/3.1.1_graphql@16.3.0:
+    resolution: {integrity: sha512-NQ17ii0rK1b34VZonlmT2QMJFI70m0TRwbknO/ihlbatXyaktDhN/98vBiUU6kNBPljqGqyIrl2T4nY2RpFANg==}
+    peerDependencies:
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      graphql: 16.3.0
+    dev: false
 
   /@iconify/json/2.1.13:
     resolution: {integrity: sha512-+riwfBZXVqln166mqylGlOrtsLW/28K4o4E8eKUX85wU67/6/QI8nhvymXcwFmyluROCcMYe2uKSriaQqcGpdQ==}
@@ -352,6 +364,39 @@ packages:
       - less
       - sass
       - stylus
+    dev: false
+
+  /@urql/core/2.4.3_graphql@16.3.0:
+    resolution: {integrity: sha512-FpapxUKF0nLdzRLoB1QsudDjeLXJhBwzkzl8bSOJ6Cnj7LRRKJ+dYdqHfqGykswB/ILrkZks2Isp4a4BhqyUow==}
+    peerDependencies:
+      graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      '@graphql-typed-document-node/core': 3.1.1_graphql@16.3.0
+      graphql: 16.3.0
+      wonka: 4.0.15
+    dev: false
+
+  /@urql/exchange-multipart-fetch/0.1.14_graphql@16.3.0:
+    resolution: {integrity: sha512-JdffZtfsJHQ4v0IevimPWbteXT1C5OH3PPbNJrbLigC9aCZB9dp2ZOjMXTvpP+3SIjJRFRguuRaL7hAGB04vgw==}
+    peerDependencies:
+      graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      '@urql/core': 2.4.3_graphql@16.3.0
+      extract-files: 11.0.0
+      graphql: 16.3.0
+      wonka: 4.0.15
+    dev: false
+
+  /@urql/vue/0.6.1_graphql@16.3.0+vue@3.2.31:
+    resolution: {integrity: sha512-sQMWiPMDGpCP+ybF4eMWyR4JXK6U2Fn9KsmdXnP8wRJiUdON+RVIkr44aulcF4yjdCRl0PeQjZAG+0h6HmYdag==}
+    peerDependencies:
+      graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+      vue: ^3.0.0
+    dependencies:
+      '@urql/core': 2.4.3_graphql@16.3.0
+      graphql: 16.3.0
+      vue: 3.2.31
+      wonka: 4.0.15
     dev: false
 
   /@vitejs/plugin-vue/2.2.4_vite@2.8.6+vue@3.2.31:
@@ -901,6 +946,11 @@ packages:
       signal-exit: 3.0.7
       strip-final-newline: 2.0.0
 
+  /extract-files/11.0.0:
+    resolution: {integrity: sha512-FuoE1qtbJ4bBVvv94CC7s0oTnKUGvQs+Rjf1L2SJFfS+HTVVjhPFtehPdQ0JiGPqVNfSSZvL5yzHHQq2Z4WNhQ==}
+    engines: {node: ^12.20 || >= 14.13}
+    dev: false
+
   /fast-glob/3.2.11:
     resolution: {integrity: sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==}
     engines: {node: '>=8.6.0'}
@@ -982,6 +1032,11 @@ packages:
     engines: {node: '>= 6'}
     dependencies:
       is-glob: 4.0.3
+
+  /graphql/16.3.0:
+    resolution: {integrity: sha512-xm+ANmA16BzCT5pLjuXySbQVFwH3oJctUVdy81w1sV0vBU0KgDdBGtxQOUd5zqOBk/JayAFeG8Dlmeq74rjm/A==}
+    engines: {node: ^12.22.0 || ^14.16.0 || >=16.0.0}
+    dev: false
 
   /gzip-size/6.0.0:
     resolution: {integrity: sha512-ax7ZYomf6jqPTQ4+XCpUGyXKHk5WweS+e05MBO4/y3WJ5RkmPXNKvX+bx1behVILVwr6JSQvZAku021CHPXG3Q==}
@@ -1461,10 +1516,6 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  /sweetalert2/11.4.4:
-    resolution: {integrity: sha512-9yYWQuRT1v9JNI/paPTSYV+68MHwe9C+HQ/I2jtfaFzoJgYRftWXOs4JqmDSjT7m2m4r8ebMMn8LcxD1Wq9B/w==}
-    dev: false
-
   /tinypool/0.1.2:
     resolution: {integrity: sha512-fvtYGXoui2RpeMILfkvGIgOVkzJEGediv8UJt7TxdAOY8pnvUkFg/fkvqTfXG9Acc9S17Cnn1S4osDc2164guA==}
     engines: {node: '>=14.0.0'}
@@ -1772,15 +1823,6 @@ packages:
       vue: 3.2.31
     dev: false
 
-  /vue-sweetalert2/5.0.2_vue@3.2.31:
-    resolution: {integrity: sha512-28pcpmvaFxwoXIUkOWwhZhmsV749jXxha8JicwPoSKyFKR5FhIaZU6UHO5WlUCLIVUI6sAWY6WngK2x/iXYwZg==}
-    peerDependencies:
-      vue: '*'
-    dependencies:
-      sweetalert2: 11.4.4
-      vue: 3.2.31
-    dev: false
-
   /vue/3.2.31:
     resolution: {integrity: sha512-odT3W2tcffTiQCy57nOT93INw1auq5lYLLYtWpPYQQYQOOdHiqFct9Xhna6GJ+pJQaF67yZABraH47oywkJgFw==}
     dependencies:
@@ -1832,6 +1874,10 @@ packages:
     hasBin: true
     dependencies:
       isexe: 2.0.0
+
+  /wonka/4.0.15:
+    resolution: {integrity: sha512-U0IUQHKXXn6PFo9nqsHphVCE5m3IntqZNB9Jjn7EB1lrR7YTDY3YWgFvEvwniTzXSvOH/XMzAZaIfJF/LvHYXg==}
+    dev: false
 
   /yaml/2.0.0-10:
     resolution: {integrity: sha512-FHV8s5ODFFQXX/enJEU2EkanNl1UDBUz8oa4k5Qo/sR+Iq7VmhCDkRMb0/mjJCNeAWQ31W8WV6PYStDE4d9EIw==}
