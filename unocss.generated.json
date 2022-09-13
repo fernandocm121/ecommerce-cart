@@ -1982,6 +1982,10 @@
             }
           ],
           [
+            "/^border-spacing-(.+)$/",
+            null
+          ],
+          [
             "caption-top",
             {
               "caption-side": "top"
@@ -4507,7 +4511,7 @@
     ]
   },
   "defaults": {},
-  "version": "0.27.2",
+  "version": "0.27.6",
   "_cache": {},
   "blocked": {},
   "parentOrders": {},
@@ -6496,6 +6500,10 @@
             {
               "border-collapse": "separate"
             }
+          ],
+          [
+            "/^border-spacing-(.+)$/",
+            null
           ],
           [
             "caption-top",
@@ -10549,7 +10557,7 @@
         "max": "9998"
       }
     },
-    "rulesSize": 543,
+    "rulesSize": 544,
     "rulesDynamic": [
       [
         "/^i-([a-z0-9:-]+)(?:\\?(mask|bg))?$/",
@@ -10794,6 +10802,10 @@
       null,
       null,
       null,
+      [
+        "/^border-spacing-(.+)$/",
+        null
+      ],
       null,
       null,
       null,
@@ -12287,238 +12299,238 @@
         null
       ],
       "caption-top": [
-        105,
+        106,
         {
           "caption-side": "top"
         },
         null
       ],
       "caption-bottom": [
-        106,
+        107,
         {
           "caption-side": "bottom"
         },
         null
       ],
       "table-auto": [
-        107,
+        108,
         {
           "table-layout": "auto"
         },
         null
       ],
       "table-fixed": [
-        108,
+        109,
         {
           "table-layout": "fixed"
         },
         null
       ],
       "table-empty-cells-visible": [
-        109,
+        110,
         {
           "empty-cells": "show"
         },
         null
       ],
       "table-empty-cells-hidden": [
-        110,
+        111,
         {
           "empty-cells": "hide"
         },
         null
       ],
       "transform-gpu": [
-        124,
+        125,
         {
           "--un-transform": "translate3d(var(--un-translate-x), var(--un-translate-y), var(--un-translate-z)) rotate(var(--un-rotate)) rotateX(var(--un-rotate-x)) rotateY(var(--un-rotate-y)) rotateZ(var(--un-rotate-z)) skewX(var(--un-skew-x)) skewY(var(--un-skew-y)) scaleX(var(--un-scale-x)) scaleY(var(--un-scale-y)) scaleZ(var(--un-scale-z))"
         },
         null
       ],
       "transform-cpu": [
-        125,
+        126,
         {
           "--un-transform": "translateX(var(--un-translate-x)) translateY(var(--un-translate-y)) translateZ(var(--un-translate-z)) rotate(var(--un-rotate)) rotateX(var(--un-rotate-x)) rotateY(var(--un-rotate-y)) rotateZ(var(--un-rotate-z)) skewX(var(--un-skew-x)) skewY(var(--un-skew-y)) scaleX(var(--un-scale-x)) scaleY(var(--un-scale-y)) scaleZ(var(--un-scale-z))"
         },
         null
       ],
       "transform-none": [
-        126,
+        127,
         {
           "transform": "none"
         },
         null
       ],
       "animate-none": [
-        137,
+        138,
         {
           "animation": "none"
         },
         null
       ],
       "touch-auto": [
-        142,
+        143,
         {
           "touch-action": "auto"
         },
         null
       ],
       "touch-manipulation": [
-        143,
+        144,
         {
           "touch-action": "manipulation"
         },
         null
       ],
       "touch-none": [
-        144,
+        145,
         {
           "touch-action": "none"
         },
         null
       ],
       "select-auto": [
-        145,
+        146,
         {
           "user-select": "auto"
         },
         null
       ],
       "select-all": [
-        146,
+        147,
         {
           "user-select": "all"
         },
         null
       ],
       "select-text": [
-        147,
+        148,
         {
           "user-select": "text"
         },
         null
       ],
       "select-none": [
-        148,
+        149,
         {
           "user-select": "none"
         },
         null
       ],
       "resize-x": [
-        149,
+        150,
         {
           "resize": "horizontal"
         },
         null
       ],
       "resize-y": [
-        150,
+        151,
         {
           "resize": "vertical"
         },
         null
       ],
       "resize": [
-        151,
+        152,
         {
           "resize": "both"
         },
         null
       ],
       "resize-none": [
-        152,
+        153,
         {
           "resize": "none"
         },
         null
       ],
       "snap-mandatory": [
-        154,
+        155,
         {
           "--un-scroll-snap-strictness": "mandatory"
         },
         null
       ],
       "snap-proximity": [
-        155,
+        156,
         {
           "--un-scroll-snap-strictness": "proximity"
         },
         null
       ],
       "snap-none": [
-        156,
+        157,
         {
           "scroll-snap-type": "none"
         },
         null
       ],
       "snap-start": [
-        157,
+        158,
         {
           "scroll-snap-align": "start"
         },
         null
       ],
       "snap-end": [
-        158,
+        159,
         {
           "scroll-snap-align": "end"
         },
         null
       ],
       "snap-center": [
-        159,
+        160,
         {
           "scroll-snap-align": "center"
         },
         null
       ],
       "snap-align-none": [
-        160,
+        161,
         {
           "scroll-snap-align": "none"
         },
         null
       ],
       "snap-normal": [
-        161,
+        162,
         {
           "scroll-snap-stop": "normal"
         },
         null
       ],
       "snap-always": [
-        162,
+        163,
         {
           "scroll-snap-stop": "always"
         },
         null
       ],
       "list-outside": [
-        174,
+        175,
         {
           "list-style-position": "outside"
         },
         null
       ],
       "list-inside": [
-        175,
+        176,
         {
           "list-style-position": "inside"
         },
         null
       ],
       "list-none": [
-        176,
+        177,
         {
           "list-style-type": "none"
         },
         null
       ],
       "appearance-none": [
-        177,
+        178,
         {
           "appearance": "none",
           "-webkit-appearance": "none"
@@ -12526,595 +12538,595 @@
         null
       ],
       "break-before-auto": [
-        179,
+        180,
         {
           "break-before": "auto"
         },
         null
       ],
       "break-before-avoid": [
-        180,
+        181,
         {
           "break-before": "avoid"
         },
         null
       ],
       "break-before-all": [
-        181,
+        182,
         {
           "break-before": "all"
         },
         null
       ],
       "break-before-avoid-page": [
-        182,
+        183,
         {
           "break-before": "avoid-page"
         },
         null
       ],
       "break-before-page": [
-        183,
+        184,
         {
           "break-before": "page"
         },
         null
       ],
       "break-before-left": [
-        184,
+        185,
         {
           "break-before": "left"
         },
         null
       ],
       "break-before-right": [
-        185,
+        186,
         {
           "break-before": "right"
         },
         null
       ],
       "break-before-column": [
-        186,
+        187,
         {
           "break-before": "column"
         },
         null
       ],
       "break-inside-auto": [
-        187,
+        188,
         {
           "break-inside": "auto"
         },
         null
       ],
       "break-inside-avoid": [
-        188,
+        189,
         {
           "break-inside": "avoid"
         },
         null
       ],
       "break-inside-avoid-page": [
-        189,
+        190,
         {
           "break-inside": "avoid-page"
         },
         null
       ],
       "break-inside-avoid-column": [
-        190,
+        191,
         {
           "break-inside": "avoid-column"
         },
         null
       ],
       "break-after-auto": [
-        191,
+        192,
         {
           "break-after": "auto"
         },
         null
       ],
       "break-after-avoid": [
-        192,
+        193,
         {
           "break-after": "avoid"
         },
         null
       ],
       "break-after-all": [
-        193,
+        194,
         {
           "break-after": "all"
         },
         null
       ],
       "break-after-avoid-page": [
-        194,
+        195,
         {
           "break-after": "avoid-page"
         },
         null
       ],
       "break-after-page": [
-        195,
+        196,
         {
           "break-after": "page"
         },
         null
       ],
       "break-after-left": [
-        196,
+        197,
         {
           "break-after": "left"
         },
         null
       ],
       "break-after-right": [
-        197,
+        198,
         {
           "break-after": "right"
         },
         null
       ],
       "break-after-column": [
-        198,
+        199,
         {
           "break-after": "column"
         },
         null
       ],
       "place-content-center": [
-        199,
+        200,
         {
           "place-content": "center"
         },
         null
       ],
       "place-content-start": [
-        200,
+        201,
         {
           "place-content": "start"
         },
         null
       ],
       "place-content-end": [
-        201,
+        202,
         {
           "place-content": "end"
         },
         null
       ],
       "place-content-between": [
-        202,
+        203,
         {
           "place-content": "space-between"
         },
         null
       ],
       "place-content-around": [
-        203,
+        204,
         {
           "place-content": "space-around"
         },
         null
       ],
       "place-content-evenly": [
-        204,
+        205,
         {
           "place-content": "space-evenly"
         },
         null
       ],
       "place-content-stretch": [
-        205,
+        206,
         {
           "place-content": "stretch"
         },
         null
       ],
       "place-items-start": [
-        206,
+        207,
         {
           "place-items": "start"
         },
         null
       ],
       "place-items-end": [
-        207,
+        208,
         {
           "place-items": "end"
         },
         null
       ],
       "place-items-center": [
-        208,
+        209,
         {
           "place-items": "center"
         },
         null
       ],
       "place-items-stretch": [
-        209,
+        210,
         {
           "place-items": "stretch"
         },
         null
       ],
       "place-self-auto": [
-        210,
+        211,
         {
           "place-self": "auto"
         },
         null
       ],
       "place-self-start": [
-        211,
+        212,
         {
           "place-self": "start"
         },
         null
       ],
       "place-self-end": [
-        212,
+        213,
         {
           "place-self": "end"
         },
         null
       ],
       "place-self-center": [
-        213,
+        214,
         {
           "place-self": "center"
         },
         null
       ],
       "place-self-stretch": [
-        214,
+        215,
         {
           "place-self": "stretch"
         },
         null
       ],
       "content-center": [
-        215,
+        216,
         {
           "align-content": "center"
         },
         null
       ],
       "content-start": [
-        216,
+        217,
         {
           "align-content": "flex-start"
         },
         null
       ],
       "content-end": [
-        217,
+        218,
         {
           "align-content": "flex-end"
         },
         null
       ],
       "content-between": [
-        218,
+        219,
         {
           "align-content": "space-between"
         },
         null
       ],
       "content-around": [
-        219,
+        220,
         {
           "align-content": "space-around"
         },
         null
       ],
       "content-evenly": [
-        220,
+        221,
         {
           "align-content": "space-evenly"
         },
         null
       ],
       "items-start": [
-        221,
+        222,
         {
           "align-items": "flex-start"
         },
         null
       ],
       "items-end": [
-        222,
+        223,
         {
           "align-items": "flex-end"
         },
         null
       ],
       "items-center": [
-        223,
+        224,
         {
           "align-items": "center"
         },
         null
       ],
       "items-baseline": [
-        224,
+        225,
         {
           "align-items": "baseline"
         },
         null
       ],
       "items-stretch": [
-        225,
+        226,
         {
           "align-items": "stretch"
         },
         null
       ],
       "self-auto": [
-        226,
+        227,
         {
           "align-self": "auto"
         },
         null
       ],
       "self-start": [
-        227,
+        228,
         {
           "align-self": "flex-start"
         },
         null
       ],
       "self-end": [
-        228,
+        229,
         {
           "align-self": "flex-end"
         },
         null
       ],
       "self-center": [
-        229,
+        230,
         {
           "align-self": "center"
         },
         null
       ],
       "self-stretch": [
-        230,
+        231,
         {
           "align-self": "stretch"
         },
         null
       ],
       "self-baseline": [
-        231,
+        232,
         {
           "align-self": "baseline"
         },
         null
       ],
       "justify-start": [
-        232,
+        233,
         {
           "justify-content": "flex-start"
         },
         null
       ],
       "justify-end": [
-        233,
+        234,
         {
           "justify-content": "flex-end"
         },
         null
       ],
       "justify-center": [
-        234,
+        235,
         {
           "justify-content": "center"
         },
         null
       ],
       "justify-between": [
-        235,
+        236,
         {
           "justify-content": "space-between"
         },
         null
       ],
       "justify-around": [
-        236,
+        237,
         {
           "justify-content": "space-around"
         },
         null
       ],
       "justify-evenly": [
-        237,
+        238,
         {
           "justify-content": "space-evenly"
         },
         null
       ],
       "justify-items-start": [
-        238,
+        239,
         {
           "justify-items": "start"
         },
         null
       ],
       "justify-items-end": [
-        239,
+        240,
         {
           "justify-items": "end"
         },
         null
       ],
       "justify-items-center": [
-        240,
+        241,
         {
           "justify-items": "center"
         },
         null
       ],
       "justify-items-stretch": [
-        241,
+        242,
         {
           "justify-items": "stretch"
         },
         null
       ],
       "justify-self-auto": [
-        242,
+        243,
         {
           "justify-self": "auto"
         },
         null
       ],
       "justify-self-start": [
-        243,
+        244,
         {
           "justify-self": "start"
         },
         null
       ],
       "justify-self-end": [
-        244,
+        245,
         {
           "justify-self": "end"
         },
         null
       ],
       "justify-self-center": [
-        245,
+        246,
         {
           "justify-self": "center"
         },
         null
       ],
       "justify-self-stretch": [
-        246,
+        247,
         {
           "justify-self": "stretch"
         },
         null
       ],
       "divide-solid": [
-        261,
+        262,
         {
           "border-style": "solid"
         },
         null
       ],
       "divide-dashed": [
-        262,
+        263,
         {
           "border-style": "dashed"
         },
         null
       ],
       "divide-dotted": [
-        263,
+        264,
         {
           "border-style": "dotted"
         },
         null
       ],
       "divide-double": [
-        264,
+        265,
         {
           "border-style": "double"
         },
         null
       ],
       "divide-none": [
-        265,
+        266,
         {
           "border-style": "none"
         },
         null
       ],
       "overscroll-auto": [
-        268,
+        269,
         {
           "overscroll-behavior": "auto"
         },
         null
       ],
       "overscroll-contain": [
-        269,
+        270,
         {
           "overscroll-behavior": "contain"
         },
         null
       ],
       "overscroll-none": [
-        270,
+        271,
         {
           "overscroll-behavior": "none"
         },
         null
       ],
       "overscroll-x-auto": [
-        271,
+        272,
         {
           "overscroll-behavior-x": "auto"
         },
         null
       ],
       "overscroll-x-contain": [
-        272,
+        273,
         {
           "overscroll-behavior-x": "contain"
         },
         null
       ],
       "overscroll-x-none": [
-        273,
+        274,
         {
           "overscroll-behavior-x": "none"
         },
         null
       ],
       "overscroll-y-auto": [
-        274,
+        275,
         {
           "overscroll-behavior-y": "auto"
         },
         null
       ],
       "overscroll-y-contain": [
-        275,
+        276,
         {
           "overscroll-behavior-y": "contain"
         },
         null
       ],
       "overscroll-y-none": [
-        276,
+        277,
         {
           "overscroll-behavior-y": "none"
         },
         null
       ],
       "scroll-auto": [
-        277,
+        278,
         {
           "scroll-behavior": "auto"
         },
         null
       ],
       "scroll-smooth": [
-        278,
+        279,
         {
           "scroll-behavior": "smooth"
         },
         null
       ],
       "truncate": [
-        279,
+        280,
         {
           "overflow": "hidden",
           "text-overflow": "ellipsis",
@@ -13123,21 +13135,21 @@
         null
       ],
       "text-ellipsis": [
-        280,
+        281,
         {
           "text-overflow": "ellipsis"
         },
         null
       ],
       "text-clip": [
-        281,
+        282,
         {
           "text-overflow": "clip"
         },
         null
       ],
       "break-normal": [
-        283,
+        284,
         {
           "overflow-wrap": "normal",
           "word-break": "normal"
@@ -13145,126 +13157,126 @@
         null
       ],
       "break-words": [
-        284,
+        285,
         {
           "overflow-wrap": "break-word"
         },
         null
       ],
       "break-all": [
-        285,
+        286,
         {
           "word-break": "break-all"
         },
         null
       ],
       "border-solid": [
-        311,
+        312,
         {
           "border-style": "solid"
         },
         null
       ],
       "border-dashed": [
-        312,
+        313,
         {
           "border-style": "dashed"
         },
         null
       ],
       "border-dotted": [
-        313,
+        314,
         {
           "border-style": "dotted"
         },
         null
       ],
       "border-double": [
-        314,
+        315,
         {
           "border-style": "double"
         },
         null
       ],
       "border-hidden": [
-        315,
+        316,
         {
           "border-style": "hidden"
         },
         null
       ],
       "border-none": [
-        316,
+        317,
         {
           "border-style": "none"
         },
         null
       ],
       "bg-none": [
-        330,
+        331,
         {
           "background-image": "none"
         },
         null
       ],
       "box-decoration-slice": [
-        331,
+        332,
         {
           "box-decoration-break": "slice"
         },
         null
       ],
       "box-decoration-clone": [
-        332,
+        333,
         {
           "box-decoration-break": "clone"
         },
         null
       ],
       "bg-auto": [
-        333,
+        334,
         {
           "background-size": "auto"
         },
         null
       ],
       "bg-cover": [
-        334,
+        335,
         {
           "background-size": "cover"
         },
         null
       ],
       "bg-contain": [
-        335,
+        336,
         {
           "background-size": "contain"
         },
         null
       ],
       "bg-fixed": [
-        336,
+        337,
         {
           "background-attachment": "fixed"
         },
         null
       ],
       "bg-local": [
-        337,
+        338,
         {
           "background-attachment": "local"
         },
         null
       ],
       "bg-scroll": [
-        338,
+        339,
         {
           "background-attachment": "scroll"
         },
         null
       ],
       "bg-clip-border": [
-        339,
+        340,
         {
           "-webkit-background-clip": "border-box",
           "background-attachment": "border-box"
@@ -13272,7 +13284,7 @@
         null
       ],
       "bg-clip-content": [
-        340,
+        341,
         {
           "-webkit-background-clip": "content-box",
           "background-attachment": "content-box"
@@ -13280,7 +13292,7 @@
         null
       ],
       "bg-clip-padding": [
-        341,
+        342,
         {
           "-webkit-background-clip": "padding-box",
           "background-attachment": "padding-box"
@@ -13288,7 +13300,7 @@
         null
       ],
       "bg-clip-text": [
-        342,
+        343,
         {
           "-webkit-background-clip": "text",
           "background-attachment": "text"
@@ -13296,266 +13308,266 @@
         null
       ],
       "bg-repeat": [
-        344,
+        345,
         {
           "background-repeat": "repeat"
         },
         null
       ],
       "bg-no-repeat": [
-        345,
+        346,
         {
           "background-repeat": "no-repeat"
         },
         null
       ],
       "bg-repeat-x": [
-        346,
+        347,
         {
           "background-position": "repeat-x"
         },
         null
       ],
       "bg-repeat-y": [
-        347,
+        348,
         {
           "background-position": "repeat-y"
         },
         null
       ],
       "bg-repeat-round": [
-        348,
+        349,
         {
           "background-position": "round"
         },
         null
       ],
       "bg-repeat-space": [
-        349,
+        350,
         {
           "background-position": "space"
         },
         null
       ],
       "bg-origin-border": [
-        350,
+        351,
         {
           "background-origin": "border-box"
         },
         null
       ],
       "bg-origin-padding": [
-        351,
+        352,
         {
           "background-origin": "padding-box"
         },
         null
       ],
       "bg-origin-content": [
-        352,
+        353,
         {
           "background-origin": "content-box"
         },
         null
       ],
       "fill-none": [
-        355,
+        356,
         {
           "fill": "none"
         },
         null
       ],
       "stroke-cap-square": [
-        361,
+        362,
         {
           "stroke-linecap": "square"
         },
         null
       ],
       "stroke-cap-round": [
-        362,
+        363,
         {
           "stroke-linecap": "round"
         },
         null
       ],
       "stroke-cap-auto": [
-        363,
+        364,
         {
           "stroke-linecap": "butt"
         },
         null
       ],
       "stroke-join-arcs": [
-        364,
+        365,
         {
           "stroke-linejoin": "arcs"
         },
         null
       ],
       "stroke-join-bevel": [
-        365,
+        366,
         {
           "stroke-linejoin": "bevel"
         },
         null
       ],
       "stroke-join-clip": [
-        366,
+        367,
         {
           "stroke-linejoin": "miter-clip"
         },
         null
       ],
       "stroke-join-round": [
-        367,
+        368,
         {
           "stroke-linejoin": "round"
         },
         null
       ],
       "stroke-join-auto": [
-        368,
+        369,
         {
           "stroke-linejoin": "miter"
         },
         null
       ],
       "stroke-none": [
-        369,
+        370,
         {
           "stroke": "none"
         },
         null
       ],
       "object-cover": [
-        370,
+        371,
         {
           "object-fit": "cover"
         },
         null
       ],
       "object-contain": [
-        371,
+        372,
         {
           "object-fit": "contain"
         },
         null
       ],
       "object-fill": [
-        372,
+        373,
         {
           "object-fit": "fill"
         },
         null
       ],
       "object-scale-down": [
-        373,
+        374,
         {
           "object-fit": "scale-down"
         },
         null
       ],
       "object-none": [
-        374,
+        375,
         {
           "object-fit": "none"
         },
         null
       ],
       "text-center": [
-        381,
+        382,
         {
           "text-align": "center"
         },
         null
       ],
       "text-left": [
-        382,
+        383,
         {
           "text-align": "left"
         },
         null
       ],
       "text-right": [
-        383,
+        384,
         {
           "text-align": "right"
         },
         null
       ],
       "text-justify": [
-        384,
+        385,
         {
           "text-align": "justify"
         },
         null
       ],
       "uppercase": [
-        394,
+        395,
         {
           "text-transform": "uppercase"
         },
         null
       ],
       "lowercase": [
-        395,
+        396,
         {
           "text-transform": "lowercase"
         },
         null
       ],
       "capitalize": [
-        396,
+        397,
         {
           "text-transform": "capitalize"
         },
         null
       ],
       "normal-case": [
-        397,
+        398,
         {
           "text-transform": "none"
         },
         null
       ],
       "italic": [
-        398,
+        399,
         {
           "font-style": "italic"
         },
         null
       ],
       "not-italic": [
-        399,
+        400,
         {
           "font-style": "normal"
         },
         null
       ],
       "normal-nums": [
-        408,
+        409,
         {
           "font-variant-numeric": "normal"
         },
         null
       ],
       "no-underline": [
-        418,
-        {
-          "text-decoration": "none"
-        },
-        null
-      ],
-      "decoration-none": [
         419,
         {
           "text-decoration": "none"
         },
         null
       ],
-      "antialiased": [
+      "decoration-none": [
         420,
+        {
+          "text-decoration": "none"
+        },
+        null
+      ],
+      "antialiased": [
+        421,
         {
           "-webkit-font-smoothing": "antialiased",
           "-moz-osx-font-smoothing": "grayscale",
@@ -13564,7 +13576,7 @@
         null
       ],
       "subpixel-antialiased": [
-        421,
+        422,
         {
           "-webkit-font-smoothing": "auto",
           "-moz-osx-font-smoothing": "auto",
@@ -13573,7 +13585,7 @@
         null
       ],
       "hyphens-manual": [
-        429,
+        430,
         {
           "-webkit-hyphens": "manual",
           "-ms-hyphens": "manual",
@@ -13582,7 +13594,7 @@
         null
       ],
       "hyphens-auto": [
-        430,
+        431,
         {
           "-webkit-hyphens": "auto",
           "-ms-hyphens": "auto",
@@ -13591,7 +13603,7 @@
         null
       ],
       "hyphens-none": [
-        431,
+        432,
         {
           "-webkit-hyphens": "none",
           "-ms-hyphens": "none",
@@ -13600,287 +13612,287 @@
         null
       ],
       "write-vertical-right": [
-        432,
+        433,
         {
           "writing-mode": "vertical-rl"
         },
         null
       ],
       "write-vertical-left": [
-        433,
+        434,
         {
           "writing-mode": "vertical-lr"
         },
         null
       ],
       "write-normal": [
-        434,
+        435,
         {
           "writing-mode": "horizontal-tb"
         },
         null
       ],
       "write-orient-mixed": [
-        435,
+        436,
         {
           "text-orientation": "mixed"
         },
         null
       ],
       "write-orient-sideways": [
-        436,
+        437,
         {
           "text-orientation": "sideways"
         },
         null
       ],
       "write-orient-upright": [
-        437,
+        438,
         {
           "text-orientation": "upright"
         },
         null
       ],
       "bg-blend-multiply": [
-        443,
+        444,
         {
           "background-blend-mode": "multiply"
         },
         null
       ],
       "bg-blend-screen": [
-        444,
+        445,
         {
           "background-blend-mode": "screen"
         },
         null
       ],
       "bg-blend-overlay": [
-        445,
+        446,
         {
           "background-blend-mode": "overlay"
         },
         null
       ],
       "bg-blend-darken": [
-        446,
+        447,
         {
           "background-blend-mode": "darken"
         },
         null
       ],
       "bg-blend-lighten": [
-        447,
+        448,
         {
           "background-blend-mode": "lighten"
         },
         null
       ],
       "bg-blend-color-dodge": [
-        448,
+        449,
         {
           "background-blend-mode": "color-dodge"
         },
         null
       ],
       "bg-blend-color-burn": [
-        449,
+        450,
         {
           "background-blend-mode": "color-burn"
         },
         null
       ],
       "bg-blend-hard-light": [
-        450,
+        451,
         {
           "background-blend-mode": "hard-light"
         },
         null
       ],
       "bg-blend-soft-light": [
-        451,
+        452,
         {
           "background-blend-mode": "soft-light"
         },
         null
       ],
       "bg-blend-difference": [
-        452,
+        453,
         {
           "background-blend-mode": "difference"
         },
         null
       ],
       "bg-blend-exclusion": [
-        453,
+        454,
         {
           "background-blend-mode": "exclusion"
         },
         null
       ],
       "bg-blend-hue": [
-        454,
+        455,
         {
           "background-blend-mode": "hue"
         },
         null
       ],
       "bg-blend-saturation": [
-        455,
+        456,
         {
           "background-blend-mode": "saturation"
         },
         null
       ],
       "bg-blend-color": [
-        456,
+        457,
         {
           "background-blend-mode": "color"
         },
         null
       ],
       "bg-blend-luminosity": [
-        457,
+        458,
         {
           "background-blend-mode": "luminosity"
         },
         null
       ],
       "bg-blend-normal": [
-        458,
+        459,
         {
           "background-blend-mode": "normal"
         },
         null
       ],
       "mix-blend-multiply": [
-        459,
+        460,
         {
           "mix-blend-mode": "multiply"
         },
         null
       ],
       "mix-blend-screen": [
-        460,
+        461,
         {
           "mix-blend-mode": "screen"
         },
         null
       ],
       "mix-blend-overlay": [
-        461,
+        462,
         {
           "mix-blend-mode": "overlay"
         },
         null
       ],
       "mix-blend-darken": [
-        462,
+        463,
         {
           "mix-blend-mode": "darken"
         },
         null
       ],
       "mix-blend-lighten": [
-        463,
+        464,
         {
           "mix-blend-mode": "lighten"
         },
         null
       ],
       "mix-blend-color-dodge": [
-        464,
+        465,
         {
           "mix-blend-mode": "color-dodge"
         },
         null
       ],
       "mix-blend-color-burn": [
-        465,
+        466,
         {
           "mix-blend-mode": "color-burn"
         },
         null
       ],
       "mix-blend-hard-light": [
-        466,
+        467,
         {
           "mix-blend-mode": "hard-light"
         },
         null
       ],
       "mix-blend-soft-light": [
-        467,
+        468,
         {
           "mix-blend-mode": "soft-light"
         },
         null
       ],
       "mix-blend-difference": [
-        468,
+        469,
         {
           "mix-blend-mode": "difference"
         },
         null
       ],
       "mix-blend-exclusion": [
-        469,
+        470,
         {
           "mix-blend-mode": "exclusion"
         },
         null
       ],
       "mix-blend-hue": [
-        470,
+        471,
         {
           "mix-blend-mode": "hue"
         },
         null
       ],
       "mix-blend-saturation": [
-        471,
+        472,
         {
           "mix-blend-mode": "saturation"
         },
         null
       ],
       "mix-blend-color": [
-        472,
+        473,
         {
           "mix-blend-mode": "color"
         },
         null
       ],
       "mix-blend-luminosity": [
-        473,
+        474,
         {
           "mix-blend-mode": "luminosity"
         },
         null
       ],
       "mix-blend-normal": [
-        474,
+        475,
         {
           "mix-blend-mode": "normal"
         },
         null
       ],
       "shadow-inset": [
-        478,
+        479,
         {
           "--un-shadow-inset": "inset"
         },
         null
       ],
       "outline": [
-        482,
+        483,
         {
           "outline-style": "solid"
         },
         null
       ],
       "outline-none": [
-        484,
+        485,
         {
           "outline": "2px solid transparent",
           "outline-offset": "2px"
@@ -13888,35 +13900,35 @@
         null
       ],
       "ring-offset": [
-        487,
+        488,
         {
           "--un-ring-offset-width": "1px"
         },
         null
       ],
       "ring-inset": [
-        493,
+        494,
         {
           "--un-ring-inset": "inset"
         },
         null
       ],
       "image-render-auto": [
-        494,
+        495,
         {
           "image-rendering": "auto"
         },
         null
       ],
       "image-render-edge": [
-        495,
+        496,
         {
           "image-rendering": "crisp-edges"
         },
         null
       ],
       "image-render-pixel": [
-        496,
+        497,
         [
           [
             "-ms-interpolation-mode",
@@ -13942,14 +13954,14 @@
         null
       ],
       "filter-none": [
-        511,
+        512,
         {
           "filter": "none"
         },
         null
       ],
       "backdrop-filter-none": [
-        512,
+        513,
         {
           "-webkit-backdrop-filter": "none",
           "backdrop-filter": "none"
@@ -13957,21 +13969,21 @@
         null
       ],
       "transition-none": [
-        518,
+        519,
         {
           "transition": "none"
         },
         null
       ],
       "content-empty": [
-        521,
+        522,
         {
           "content": "\"\""
         },
         null
       ],
       "content-none": [
-        522,
+        523,
         {
           "content": "\"\""
         },
