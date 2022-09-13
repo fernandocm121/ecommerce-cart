@@ -7,7 +7,7 @@ import iconSet from 'quasar/icon-set/mdi-v6'
 import '@quasar/extras/mdi-v6/mdi-v6.css'
 import '@quasar/extras/material-icons/material-icons.css'
 
-import lang from 'quasar/lang/pt-BR.js'
+import lang from 'quasar/lang/pt-BR'
 
 export const install = (app) => {
   app.use(Quasar, {
