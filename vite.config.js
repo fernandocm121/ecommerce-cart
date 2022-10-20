@@ -18,6 +18,7 @@ export default defineConfig(({ mode }) => {
   return {
     resolve: {
       alias: {
+        '@': resolve(__dirname),
         '~/': `${ resolve(__dirname, 'src') }/`,
       },
     },
@@ -59,36 +60,41 @@ export default defineConfig(({ mode }) => {
       }),
 
       // https://quasar.dev/start/vite-plugin
-      Quasar({
-        autoImportComponentCase: 'combined',
-        sassVariables: 'src/styles/quasar/variables.sass',
-      }),
+      // Quasar({
+      //   autoImportComponentCase: 'combined',
+      //   sassVariables: 'src/styles/quasar/variables.sass',
+      // }),
 
       // https://github.com/antfu/unocss
       Unocss(),
 
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
-        dts: 'src/auto-imports.d.ts',
-        include: [
-          /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
-          /\.vue$/, /\.vue\?vue/, // .vue
+        // global imports to register
+        imports: [
+          'vue',
+          'vue-router',
+          'vue-i18n',
+          'vue/macros',
+          'quasar',
+          '@vueuse/head',
+          '@vueuse/core',
         ],
+
+        // Auto import for all module exports under directories
+        dirs: [ 'src/composables/**' ],
+
+        // Auto import inside Vue template
+        // see https://github.com/unjs/unimport/pull/15
+        vueTemplate: true,
+
         // Generate corresponding .eslintrc-auto-import.json file.
         // eslint globals Docs - https://eslint.org/docs/user-guide/configuring/language-options#specifying-globals
         eslintrc: {
           enabled: true,
-          filepath: './.eslintrc-auto-import.json',
-          globalsPropValue: true,
         },
-        imports: [
-          'vue',
-          'vue-router',
-          'quasar',
-          'vue-i18n',
-          '@vueuse/core',
-          '@vueuse/head',
-        ],
+
+        dts: 'src/auto-imports.d.ts',
       }),
 
       // https://github.com/antfu/unplugin-icons
@@ -127,6 +133,16 @@ export default defineConfig(({ mode }) => {
           secure: false,
         },
       },
+    },
+
+    optimizeDeps: {
+      include: [
+        'vue',
+        'vue-router',
+        '@vueuse/head',
+        '@vueuse/core',
+      ],
+      exclude: [ 'vuedraggable' ],
     },
   }
 })

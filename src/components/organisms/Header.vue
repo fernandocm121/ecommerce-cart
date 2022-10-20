@@ -1,12 +1,10 @@
 <script setup>
-import useCart from '../composables/use-cart'
-
 const { cartCounter } = useCart()
 </script>
 
 <template>
 <div
-  un-bg-primary
+  un-bg-dark
   un-flex
   un-justify-between
   un-p-md

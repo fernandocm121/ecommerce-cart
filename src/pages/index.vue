@@ -2,10 +2,11 @@
 const products = [
   {
     imgProps: {
-      src: 'https://a-static.mlcdn.com.br/618x463/controle-para-ps5-sem-fio-dualsense-sony-midnight-black/magazineluiza/230019300/89af4b55edae3af2e94df48962336e1f.jpg',
+      src: 'https://imgnike-a.akamaihd.net/1300x1300/014600ID.jpg',
     },
     quantity: 12,
     title: 'Controle para PS5 sem Fio DualSense Sony',
+    price: 400.00,
   },
   {
     imgProps: {
@@ -13,6 +14,7 @@ const products = [
     },
     quantity: 8,
     title: 'Xbox Series S 2020 Nova Geração 512GB SSD',
+    price: 2500.00,
   },
   {
     imgProps: {
@@ -20,6 +22,7 @@ const products = [
     },
     quantity: 5,
     title: 'Nintendo Switch 32GB, 1x Joycon, Neon Azul/Vermelho',
+    price: 1200.00,
   }
 ]
 </script>
@@ -30,18 +33,17 @@ const products = [
   un-justify-center
 >
   <div 
-    un-grid="~ cols-3 gap-4"
+    un-grid="~ cols-5 gap-4"
     un-mt-lg
     un-w-col-8
   >
-    <product-item 
+    <ProductItem 
       v-for="(product, index) in products"
       :img-props="product.imgProps"
       :key="`product-${index}`"
-      :quantity="product.quantity"
       :title="product.title"
+      :price="product.price"
       un-flex="~ col"
-      un-items-center
       un-p-md
     />
   </div>
