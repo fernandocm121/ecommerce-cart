@@ -45,6 +45,8 @@ const updateStock = async () => {
       fit="contain"
       v-bind="imgProps"
       un-max-w="md"
+      width="250px"
+      height="250px"
     >
     </QImg>
     <div un-display-block>

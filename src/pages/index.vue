@@ -2,28 +2,84 @@
 const products = [
   {
     imgProps: {
-      src: 'https://imgnike-a.akamaihd.net/1300x1300/014600ID.jpg',
+      src: 'https://i.imgur.com/R7QIQCx.jpeg',
     },
-    quantity: 12,
-    title: 'Controle para PS5 sem Fio DualSense Sony',
-    price: 400.00,
+    quantity: 14,
+    title: 'Blusa da Nike masculina',
+    price: 120.00,
   },
   {
     imgProps: {
-      src: 'https://a-static.mlcdn.com.br/618x463/xbox-series-s-2020-nova-geracao-512gb-ssd-1-controle-branco-microsoft-lancamento/magazineluiza/043083000/32fe1e8fc7e51793a5ec7f89abd77a9d.jpg'
+      src: 'https://i.imgur.com/KdRBkvx.jpeg',
     },
-    quantity: 8,
-    title: 'Xbox Series S 2020 Nova Geração 512GB SSD',
-    price: 2500.00,
+    quantity: 7,
+    title: 'Blusa da Nike feminina',
+    price: 120.00,
   },
   {
     imgProps: {
-      src: 'https://a-static.mlcdn.com.br/618x463/nintendo-switch-32gb-1x-joycon-neon-azul-vermelho-hbdskaba1/kabum/135586/114e88d970f7af6e147925885a8c3833.jpg'
+      src: 'https://i.imgur.com/2WVpX9W.jpeg',
+    },
+    quantity: 9,
+    title: 'Blusa da Nike basica',
+    price: 130.00,
+  },
+  {
+    imgProps: {
+      src: 'https://i.imgur.com/PcUUGFi.png',
     },
     quantity: 5,
-    title: 'Nintendo Switch 32GB, 1x Joycon, Neon Azul/Vermelho',
-    price: 1200.00,
-  }
+    title: 'Camiseta Nike Sportswear Essential Feminina',
+    price: 150.00,
+  },
+  {
+    imgProps: {
+      src: 'https://i.imgur.com/sTCHDmx.jpeg',
+    },
+    quantity: 16,
+    title: 'Blusa da Nike branca',
+    price: 150.00,
+  },
+  {
+    imgProps: {
+      src: 'https://i.imgur.com/xqTq6zn.jpeg',
+    },
+    quantity: 3,
+    title: 'Jaqueta da Nike',
+    price: 230.00,
+  },
+  {
+    imgProps: {
+      src: 'https://i.imgur.com/yfydkOY.jpeg',
+    },
+    quantity: 5,
+    title: 'Jaqueta-Nike-Sportswear-Windrunner',
+    price: 450.00,
+  },
+  {
+    imgProps: {
+      src: 'https://i.imgur.com/LpUeRYi.jpeg',
+    },
+    quantity: 22,
+    title: 'Agasalho Nike',
+    price: 260.00,
+  },
+  {
+    imgProps: {
+      src: 'https://i.imgur.com/80UYdgw.jpeg',
+    },
+    quantity: 17,
+    title: 'blusa feminina Nike',
+    price: 150.00,
+  },
+  {
+    imgProps: {
+      src: 'https://i.imgur.com/KdRBkvx.jpeg',
+    },
+    quantity: 10,
+    title: 'Camisa Nike Algodão',
+    price: 130.00,
+  },
 ]
 </script>
 

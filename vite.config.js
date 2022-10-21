@@ -142,7 +142,6 @@ export default defineConfig(({ mode }) => {
         '@vueuse/head',
         '@vueuse/core',
       ],
-      exclude: [ 'vuedraggable' ],
     },
   }
 })
