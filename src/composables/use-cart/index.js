@@ -1,12 +1,12 @@
 const cartCounter = ref(0)
 
 export default function() {
-  function updateCart() {
+  function addCart() {
     cartCounter.value += 1
   }
 
   return {
     cartCounter,
-    updateCart
+    addCart
   }
 }

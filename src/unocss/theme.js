@@ -31,13 +31,13 @@ export default {
   /* ---------------------------------------- */
   // https://windicss.org/utilities/colors.html#customization
   colors: {
-    primary:    '#1e1e26',
+    primary:    '#a81b35',
     secondary:  '#FFCD00',
     accent:     '#54346F',
 
     dark: {
-      DEFAULT:  '#1d1d1d',
-      page:     '#121212',
+      DEFAULT:  '#3A3335',
+      page:     '#000000',
     },
 
     foreground: '#edecee',
