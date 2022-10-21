@@ -53,7 +53,7 @@ const products = [
       src: 'https://i.imgur.com/yfydkOY.jpeg',
     },
     quantity: 5,
-    title: 'Jaqueta-Nike-Sportswear-Windrunner',
+    title: 'Jaqueta Nike Sportswear Windrunner',
     price: 450.00,
   },
   {
@@ -69,7 +69,7 @@ const products = [
       src: 'https://i.imgur.com/80UYdgw.jpeg',
     },
     quantity: 17,
-    title: 'blusa feminina Nike',
+    title: 'Blusa feminina Nike',
     price: 150.00,
   },
   {
@@ -89,7 +89,7 @@ const products = [
   un-justify-center
 >
   <div 
-    un-grid="~ cols-5 gap-4"
+    un-grid="~ cols-2 sm:cols-3 md:cols-5 gap-4"
     un-mt-lg
     un-w-col-8
   >

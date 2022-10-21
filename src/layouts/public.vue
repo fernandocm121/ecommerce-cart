@@ -2,7 +2,7 @@
 <q-layout
   class="ecommerce-cart"
   view="lhr LpR lFr"
-  un-bg-foreground
+  un-bg="#E9EAE9"
 >
   <router-view v-slot="{ Component }">
     <div 

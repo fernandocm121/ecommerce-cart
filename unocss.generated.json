@@ -4262,7 +4262,7 @@
             "2xl": "2560px"
           },
           "colors": {
-            "primary": "#a81b35",
+            "primary": "#00ACB7",
             "secondary": "#FFCD00",
             "accent": "#54346F",
             "dark": {
@@ -8782,7 +8782,7 @@
             "2xl": "2560px"
           },
           "colors": {
-            "primary": "#a81b35",
+            "primary": "#00ACB7",
             "secondary": "#FFCD00",
             "accent": "#54346F",
             "dark": {
@@ -10009,7 +10009,7 @@
           "900": "#0f172a",
           "DEFAULT": "#94a3b8"
         },
-        "primary": "#a81b35",
+        "primary": "#00ACB7",
         "secondary": "#FFCD00",
         "accent": "#54346F",
         "foreground": "#edecee",

@@ -31,7 +31,7 @@ export default {
   /* ---------------------------------------- */
   // https://windicss.org/utilities/colors.html#customization
   colors: {
-    primary:    '#a81b35',
+    primary:    '#00ACB7',
     secondary:  '#FFCD00',
     accent:     '#54346F',
 

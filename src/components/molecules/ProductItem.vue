@@ -29,24 +29,28 @@ const updateStock = async () => {
   quantityStock.value = quantityStock.value - 1
   addCart()
 }
+
+const priceInstallment = computed(() => {
+  return Number(props.price / 6, 2).toFixed(2)
+})
 </script>
 
 <template>
-<div
+<QCard
+  class="product-item"
   un-bg-white
   un-rounded-md
-  un-space-y-xs
+  un-space-y-md
+  un-pt-0
+  un-pb-xs
   @mouseover="showCartBtn = true"
   @mouseleave="showCartBtn = false"
 >
   <div class="container">
     <QImg
-      class="img-quasar"
-      fit="contain"
       v-bind="imgProps"
+      fit="contain"
       un-max-w="md"
-      width="250px"
-      height="250px"
     >
     </QImg>
     <div un-display-block>
@@ -64,15 +68,24 @@ const updateStock = async () => {
       />
     </div>
   </div>
-  <div un-text="16px">
+  <div 
+    un-text="16px"
+    un-min-h="50px"
+  >
     {{ title }}
   </div>
-  <div
-    un-color-dark
-    un-font="semibold"
-    un-text-xl
-  >
-    R$ {{ price }}
+  <div>
+    <div
+      un-color-primary
+      un-font="semibold"
+      un-text-xl
+    >
+      R$ {{ price }}
+    </div>
+
+    <div>
+      ou até 6x de R$ {{ priceInstallment }}
+    </div>
   </div>
   <!-- <q-btn 
     label="Adicionar ao carrinho"
@@ -81,10 +94,12 @@ const updateStock = async () => {
     @click="updateStock"
   >
   </q-btn> -->
-</div>
+</QCard>
 </template>
 
 <style lang="sass">
+.product-item
+  box-shadow: 0 1px 0px rgb(0 0 0 / 20%), 0 0px 1px rgb(0 0 0 / 14%), 0 0px 1px 0px rgb(0 0 0 / 12%) !important
 .container
   position: relative
   width: 100%
@@ -92,7 +107,7 @@ const updateStock = async () => {
 .container .btn-quasar
   position: absolute
   left: 100%
-  bottom: -10px
+  bottom: -45px
   transform: translate(-50%, -50%)
   -ms-transform: translate(-50%, -50%)
   background-color: #555
