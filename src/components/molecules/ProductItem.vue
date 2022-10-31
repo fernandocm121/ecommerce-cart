@@ -1,11 +1,10 @@
 <script setup>
-// import http from "../../composables/use-axios";
-
 const props = defineProps({
   imgProps: { 
     type: Object,
     default: () => ({}),
   },
+  src: String,
   price: Number,
   title: String
 })
@@ -16,14 +15,7 @@ const { addCart } = useCart()
 
 const quantityStock = ref(props.quantity)
 
-// const postData = {
-//   name: "GTA 8",
-//   description: "Games",
-//   storedQty: "25000"
-// }
-
 const updateStock = async () => {
-  // const res = await http("/products/create", {method: 'patch', data: postData});
   if (quantityStock.value < 1) return
  
   quantityStock.value = quantityStock.value - 1
@@ -51,6 +43,7 @@ const priceInstallment = computed(() => {
       v-bind="imgProps"
       fit="contain"
       un-max-w="md"
+      :src="src"
     >
     </QImg>
     <div un-display-block>
@@ -87,13 +80,6 @@ const priceInstallment = computed(() => {
       ou até 6x de R$ {{ priceInstallment }}
     </div>
   </div>
-  <!-- <q-btn 
-    label="Adicionar ao carrinho"
-    un-bg-primary
-    un-text-white
-    @click="updateStock"
-  >
-  </q-btn> -->
 </QCard>
 </template>
 

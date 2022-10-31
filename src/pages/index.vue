@@ -1,86 +1,13 @@
 <script setup>
-const products = [
-  {
-    imgProps: {
-      src: 'https://i.imgur.com/R7QIQCx.jpeg',
-    },
-    quantity: 14,
-    title: 'Blusa da Nike masculina',
-    price: 120.00,
-  },
-  {
-    imgProps: {
-      src: 'https://i.imgur.com/KdRBkvx.jpeg',
-    },
-    quantity: 7,
-    title: 'Blusa da Nike feminina',
-    price: 120.00,
-  },
-  {
-    imgProps: {
-      src: 'https://i.imgur.com/2WVpX9W.jpeg',
-    },
-    quantity: 9,
-    title: 'Blusa da Nike basica',
-    price: 130.00,
-  },
-  {
-    imgProps: {
-      src: 'https://i.imgur.com/PcUUGFi.png',
-    },
-    quantity: 5,
-    title: 'Camiseta Nike Sportswear Essential Feminina',
-    price: 150.00,
-  },
-  {
-    imgProps: {
-      src: 'https://i.imgur.com/sTCHDmx.jpeg',
-    },
-    quantity: 16,
-    title: 'Blusa da Nike branca',
-    price: 150.00,
-  },
-  {
-    imgProps: {
-      src: 'https://i.imgur.com/xqTq6zn.jpeg',
-    },
-    quantity: 3,
-    title: 'Jaqueta da Nike',
-    price: 230.00,
-  },
-  {
-    imgProps: {
-      src: 'https://i.imgur.com/yfydkOY.jpeg',
-    },
-    quantity: 5,
-    title: 'Jaqueta Nike Sportswear Windrunner',
-    price: 450.00,
-  },
-  {
-    imgProps: {
-      src: 'https://i.imgur.com/LpUeRYi.jpeg',
-    },
-    quantity: 22,
-    title: 'Agasalho Nike',
-    price: 260.00,
-  },
-  {
-    imgProps: {
-      src: 'https://i.imgur.com/80UYdgw.jpeg',
-    },
-    quantity: 17,
-    title: 'Blusa feminina Nike',
-    price: 150.00,
-  },
-  {
-    imgProps: {
-      src: 'https://i.imgur.com/KdRBkvx.jpeg',
-    },
-    quantity: 10,
-    title: 'Camisa Nike Algodão',
-    price: 130.00,
-  },
-]
+const axios = useAxios()
+
+const products = ref()
+
+onMounted(async () => {
+  const { data } = await axios("/products/get", { method: 'get' });
+
+  products.value = data
+})
 </script>
 
 <template>
@@ -95,12 +22,12 @@ const products = [
   >
     <ProductItem 
       v-for="(product, index) in products"
-      :img-props="product.imgProps"
+      un-flex="~ col"
+      un-p-md
       :key="`product-${index}`"
       :title="product.title"
       :price="product.price"
-      un-flex="~ col"
-      un-p-md
+      :src="product.src"
     />
   </div>
 </div>
