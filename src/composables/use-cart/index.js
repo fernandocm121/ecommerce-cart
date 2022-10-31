@@ -1,6 +1,6 @@
 const cartCounter = ref(0)
 
-export default function() {
+export default () => {
   function addCart() {
     cartCounter.value += 1
   }
