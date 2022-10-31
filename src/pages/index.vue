@@ -25,7 +25,7 @@ onMounted(async () => {
       un-flex="~ col"
       un-p-md
       :key="`product-${index}`"
-      :title="product.title"
+      :title="product.name"
       :price="product.price"
       :src="product.src"
     />

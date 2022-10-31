@@ -33,7 +33,7 @@ export default {
   colors: {
     primary:    '#00ACB7',
     secondary:  '#FFCD00',
-    accent:     '#54346F',
+    accent:     '#02737a',
 
     dark: {
       DEFAULT:  '#3A3335',

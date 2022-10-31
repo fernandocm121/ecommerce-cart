@@ -4264,7 +4264,7 @@
           "colors": {
             "primary": "#00ACB7",
             "secondary": "#FFCD00",
-            "accent": "#54346F",
+            "accent": "#02737a",
             "dark": {
               "DEFAULT": "#3A3335",
               "page": "#000000"
@@ -8784,7 +8784,7 @@
           "colors": {
             "primary": "#00ACB7",
             "secondary": "#FFCD00",
-            "accent": "#54346F",
+            "accent": "#02737a",
             "dark": {
               "DEFAULT": "#3A3335",
               "page": "#000000"
@@ -10011,7 +10011,7 @@
         },
         "primary": "#00ACB7",
         "secondary": "#FFCD00",
-        "accent": "#54346F",
+        "accent": "#02737a",
         "foreground": "#edecee",
         "positive": "#21ba45",
         "negative": "#c10015",

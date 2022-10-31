@@ -51,13 +51,14 @@ const priceInstallment = computed(() => {
         v-show="showCartBtn"
         class="btn-quasar"
         icon="i-mdi-cart"
-        un-bg="primary"
+        un-bg="primary hover:accent"
         un-color="white"
         un-py-md
         un-px-0
         un-w-fit
         un-flex
         round
+        @click="updateStock()"
       />
     </div>
   </div>
@@ -96,13 +97,9 @@ const priceInstallment = computed(() => {
   bottom: -45px
   transform: translate(-50%, -50%)
   -ms-transform: translate(-50%, -50%)
-  background-color: #555
   color: white
   font-size: 16px
   border: none
   cursor: pointer
-
-.container .btn-quasar:hover
-  background-color: black
 </style>
 
