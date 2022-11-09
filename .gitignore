@@ -1,0 +1,45 @@
+*.log
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.suo
+
+# Local files
+*.local
+LOCAL_NOTES.md
+
+# Local environment files
+ecommerce-cart-api/.env
+ecommerce-cart-api/tsconfig.build.json
+ecommerce-cart-api/tsconfig.json
+ecommerce-cart-front/.env
+ecommerce-cart-api/.env.local
+ecommerce-cart-api/.env.*.local
+
+# Log files
+npm-debug.log*
+
+# NPM
+ecommerce-cart-api/node_modules
+ecommerce-cart-front/node_modules
+dist
+
+# Operating System
+.DS_Store
+
+# Tests
+ecommerce-cart-api/tests/**/videos/
+ecommerce-cart-api/tests/**/screenshots/
+.nyc_output
+
+# Vite
+.vite-ssg-dist
+.vite-ssg-temp
+.vercel
+
+# Generated files by project
+ecommerce-cart-front/src/components.d.ts
+ecommerce-cart-front/src/auto-imports.d.ts
+ecommerce-cart-front/.eslintrc-auto-import.json
+ecommerce-cart-front/.eslintrc-auto-imporT.json
