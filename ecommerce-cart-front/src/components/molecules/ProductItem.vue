@@ -32,13 +32,15 @@ const priceInstallment = computed(() => {
   class="product-item"
   un-bg-white
   un-rounded-md
-  un-space-y-md
-  un-pt-0
-  un-pb-xs
+  un-p-0
+  un-flex="~ col"
+  un-h-fit
+  un-pb-md
+  un-content-between
   @mouseover="showCartBtn = true"
   @mouseleave="showCartBtn = false"
 >
-  <div class="container">
+  <div class="product-item__container">
     <QImg
       v-bind="imgProps"
       fit="contain"
@@ -46,60 +48,73 @@ const priceInstallment = computed(() => {
       :src="src"
     >
     </QImg>
-    <div un-display-block>
+  </div>
+  <div 
+    un-flex="~ col"
+    un-items-center
+  >
+    <div
+      un-mt-md
+      un-w="80%"
+    >
+      <div un-h="50px">
+        <span
+          class="product-item__title"
+          un-text="14px"
+        >
+          {{ title }}
+        </span>
+      </div>
+      <div
+        un-color-primary
+        un-font="semibold"
+        un-text-xl
+      >
+        R$ {{ price }}
+      </div>
+
+      <div>
+        ou até 6x de R$ {{ priceInstallment }}
+      </div>
+    </div>
+  </div>
+  <template v-if="showCartBtn">
+    <div
+      un-flex
+      un-justify-center
+      un-items-end
+      un-h-full
+      un-mt-md
+    >
       <QBtn
-        v-show="showCartBtn"
-        class="btn-quasar"
-        icon="i-mdi-cart"
+        class="product-item__btn-quasar"
+        label="Ver opções"
         un-bg="primary hover:accent"
         un-color="white"
-        un-py-md
-        un-px-0
-        un-w-fit
-        un-flex
-        round
+        no-caps
+        rounded
         @click="updateStock()"
       />
     </div>
-  </div>
-  <div 
-    un-text="16px"
-    un-min-h="50px"
-  >
-    {{ title }}
-  </div>
-  <div>
-    <div
-      un-color-primary
-      un-font="semibold"
-      un-text-xl
-    >
-      R$ {{ price }}
-    </div>
-
-    <div>
-      ou até 6x de R$ {{ priceInstallment }}
-    </div>
-  </div>
+  </template>
 </QCard>
 </template>
 
 <style lang="sass">
 .product-item
   box-shadow: 0 1px 0px rgb(0 0 0 / 20%), 0 0px 1px rgb(0 0 0 / 14%), 0 0px 1px 0px rgb(0 0 0 / 12%) !important
-.container
-  position: relative
-  width: 100%
+  &__container
+    position: relative
+    width: 100%
 
-.container .btn-quasar
-  position: absolute
-  left: 100%
-  bottom: -45px
-  transform: translate(-50%, -50%)
-  -ms-transform: translate(-50%, -50%)
-  color: white
-  font-size: 16px
-  border: none
-  cursor: pointer
+  &__container &__btn-quasar
+    position: absolute
+    left: 100%
+    bottom: -45px
+    transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+    color: white
+    font-size: 16px
+    border: none
+    cursor: pointer
 </style>
-
