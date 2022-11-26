@@ -31,12 +31,11 @@ const priceInstallment = computed(() => {
 <QCard
   class="product-item"
   un-bg-white
+  un-content-between
   un-rounded-md
   un-p-0
-  un-flex="~ col"
-  un-h-fit
-  un-pb-md
-  un-content-between
+  un-w-full
+  :style="`${showCartBtn ? 'position: absolute' : 'position: relative'}`"
   @mouseover="showCartBtn = true"
   @mouseleave="showCartBtn = false"
 >
@@ -47,11 +46,12 @@ const priceInstallment = computed(() => {
       un-max-w="md"
       :src="src"
     >
-    </QImg>
+    </QImg>\
   </div>
   <div 
     un-flex="~ col"
     un-items-center
+    un-mb-md
   >
     <div
       un-mt-md
@@ -78,25 +78,22 @@ const priceInstallment = computed(() => {
       </div>
     </div>
   </div>
-  <template v-if="showCartBtn">
-    <div
-      un-flex
-      un-justify-center
-      un-items-end
-      un-h-full
-      un-mt-md
-    >
-      <QBtn
-        class="product-item__btn-quasar"
-        label="Ver opções"
-        un-bg="primary hover:accent"
-        un-color="white"
-        no-caps
-        rounded
-        @click="updateStock()"
-      />
-    </div>
-  </template>
+  <div 
+    un-flex
+    un-justify-center
+    un-my-md
+    :style="`${showCartBtn ? 'opacity: 1; height: auto;' : 'overflow: hidden; opacity: 0; height: 0;'} transition: opacity 600ms ease-out;`"
+  >
+    <QBtn
+      class="product-item__btn-quasar"
+      label="Ver opções"
+      un-bg="primary hover:accent"
+      un-color="white"
+      no-caps
+      rounded
+      @click="updateStock()"
+    />
+  </div>
 </QCard>
 </template>
 
