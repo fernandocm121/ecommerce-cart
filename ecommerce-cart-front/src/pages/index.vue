@@ -14,6 +14,7 @@ onMounted(async () => {
 <div 
   un-flex="~ row wrap"
   un-justify-center
+  un-mb-md
 >
   <div 
     v-for="(product, index) in products"
