@@ -82,7 +82,7 @@ const priceInstallment = computed(() => {
     un-flex
     un-justify-center
     un-my-md
-    :style="`${showCartBtn ? 'opacity: 1; height: auto;' : 'overflow: hidden; opacity: 0; height: 0;'} transition: opacity 600ms ease-out;`"
+    :style="`${showCartBtn ? 'opacity: 1;' : 'overflow: hidden; opacity: 0; max-height: 0;'};`"
   >
     <QBtn
       class="product-item__btn-quasar"
@@ -100,6 +100,7 @@ const priceInstallment = computed(() => {
 <style lang="sass">
 .product-item
   box-shadow: 0 1px 0px rgb(0 0 0 / 20%), 0 0px 1px rgb(0 0 0 / 14%), 0 0px 1px 0px rgb(0 0 0 / 12%) !important
+
   &__container
     position: relative
     width: 100%
