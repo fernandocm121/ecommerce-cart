@@ -12,19 +12,21 @@ onMounted(async () => {
 
 <template>
 <div 
-  un-flex
+  un-flex="~ row wrap"
   un-justify-center
+  un-mb-md
 >
   <div 
-    un-grid="~ cols-2 sm:cols-3 md:cols-5 gap-4"
-    un-mt-lg
-    un-w-col-8
+    v-for="(product, index) in products"
+    :key="`product-${index}`"
+    un-w="288px"
+    un-flex
+    un-justify-center
+    un-pos-relative
+    un-my-xl
+    un-mx-md
   >
-    <ProductItem 
-      v-for="(product, index) in products"
-      un-flex="~ col"
-      un-p-md
-      :key="`product-${index}`"
+    <ProductItem
       :title="product.name"
       :price="product.price"
       :src="product.src"

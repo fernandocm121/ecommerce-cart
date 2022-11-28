@@ -8,9 +8,14 @@ const { cartCounter } = useCart()
   un-flex
   un-p-md
   un-w-full
+  un-justify-center
 >
-  <div un-flex un-justify-center un-w-full>
-    <div un-justify-between un-w-col-8 un-flex>
+  <div un-w="80%">
+    <div
+      un-justify-between
+      un-w-full
+      un-flex
+    >
       <div un-text="xl white">
         <QImg
           fit="contain"

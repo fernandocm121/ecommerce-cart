@@ -31,55 +31,68 @@ const priceInstallment = computed(() => {
 <QCard
   class="product-item"
   un-bg-white
+  un-content-between
   un-rounded-md
-  un-space-y-md
-  un-pt-0
-  un-pb-xs
+  un-p-0
+  un-w-full
+  :style="`${showCartBtn ? 'position: absolute' : 'position: relative'}`"
   @mouseover="showCartBtn = true"
   @mouseleave="showCartBtn = false"
 >
-  <div class="container">
+  <div class="product-item__container">
     <QImg
       v-bind="imgProps"
       fit="contain"
       un-max-w="md"
       :src="src"
     >
-    </QImg>
-    <div un-display-block>
-      <QBtn
-        v-show="showCartBtn"
-        class="btn-quasar"
-        icon="i-mdi-cart"
-        un-bg="primary hover:accent"
-        un-color="white"
-        un-py-md
-        un-px-0
-        un-w-fit
-        un-flex
-        round
-        @click="updateStock()"
-      />
+    </QImg>\
+  </div>
+  <div 
+    un-flex="~ col"
+    un-items-center
+    un-mb-md
+  >
+    <div
+      un-mt-md
+      un-w="80%"
+    >
+      <div un-h="50px">
+        <span
+          class="product-item__title"
+          un-text="14px"
+        >
+          {{ title }}
+        </span>
+      </div>
+      <div
+        un-color-primary
+        un-font="semibold"
+        un-text-xl
+      >
+        R$ {{ price }}
+      </div>
+
+      <div>
+        ou até 6x de R$ {{ priceInstallment }}
+      </div>
     </div>
   </div>
   <div 
-    un-text="16px"
-    un-min-h="50px"
+    un-flex
+    un-justify-center
+    un-my-md
+    :style="`${showCartBtn ? 'opacity: 1;' : 'overflow: hidden; opacity: 0; max-height: 0;'};`"
   >
-    {{ title }}
-  </div>
-  <div>
-    <div
-      un-color-primary
-      un-font="semibold"
-      un-text-xl
-    >
-      R$ {{ price }}
-    </div>
-
-    <div>
-      ou até 6x de R$ {{ priceInstallment }}
-    </div>
+    <QBtn
+      class="product-item__btn-quasar"
+      label="Ver opções"
+      un-bg="primary hover:accent"
+      un-color="white"
+      no-caps
+      rounded
+      @click="updateStock()"
+    />
   </div>
 </QCard>
 </template>
@@ -87,19 +100,19 @@ const priceInstallment = computed(() => {
 <style lang="sass">
 .product-item
   box-shadow: 0 1px 0px rgb(0 0 0 / 20%), 0 0px 1px rgb(0 0 0 / 14%), 0 0px 1px 0px rgb(0 0 0 / 12%) !important
-.container
-  position: relative
-  width: 100%
 
-.container .btn-quasar
-  position: absolute
-  left: 100%
-  bottom: -45px
-  transform: translate(-50%, -50%)
-  -ms-transform: translate(-50%, -50%)
-  color: white
-  font-size: 16px
-  border: none
-  cursor: pointer
+  &__container
+    position: relative
+    width: 100%
+
+  &__container &__btn-quasar
+    position: absolute
+    left: 100%
+    bottom: -45px
+    transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+    color: white
+    font-size: 16px
+    border: none
+    cursor: pointer
 </style>
-
