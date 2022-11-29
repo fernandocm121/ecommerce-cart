@@ -26,6 +26,9 @@ let ProductsController = class ProductsController {
     async findAll() {
         return this.productsService.findAll();
     }
+    async getProduct(id) {
+        return this.productsService.getProduct(id);
+    }
     async update(updateProductDto, id) {
         const product = await this.productsService.getProduct(id);
         return await this.productsService.update(updateProductDto, id);
@@ -47,6 +50,13 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], ProductsController.prototype, "findAll", null);
+__decorate([
+    (0, common_1.Get)('/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], ProductsController.prototype, "getProduct", null);
 __decorate([
     (0, common_1.Patch)('/:id'),
     __param(0, (0, common_1.Body)()),

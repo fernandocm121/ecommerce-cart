@@ -4,6 +4,7 @@ const props = defineProps({
     type: Object,
     default: () => ({}),
   },
+  id: Number,
   src: String,
   price: Number,
   title: String
@@ -39,61 +40,63 @@ const priceInstallment = computed(() => {
   @mouseover="showCartBtn = true"
   @mouseleave="showCartBtn = false"
 >
-  <div class="product-item__container">
-    <QImg
-      v-bind="imgProps"
-      fit="contain"
-      un-max-w="md"
-      :src="src"
-    >
-    </QImg>\
-  </div>
-  <div 
-    un-flex="~ col"
-    un-items-center
-    un-mb-md
-  >
-    <div
-      un-mt-md
-      un-w="80%"
-    >
-      <div un-h="50px">
-        <span
-          class="product-item__title"
-          un-text="14px"
-        >
-          {{ title }}
-        </span>
-      </div>
-      <div
-        un-color-primary
-        un-font="semibold"
-        un-text-xl
+  <RouterLink :to="`/produto/${id}`">
+    <div class="product-item__container">
+      <QImg
+        v-bind="imgProps"
+        fit="contain"
+        un-max-w="md"
+        :src="src"
       >
-        R$ {{ price }}
-      </div>
+      </QImg>\
+    </div>
+    <div 
+      un-flex="~ col"
+      un-items-center
+      un-mb-md
+    >
+      <div
+        un-mt-md
+        un-w="80%"
+      >
+        <div un-h="50px">
+          <span
+            class="product-item__title"
+            un-text="14px"
+          >
+            {{ title }}
+          </span>
+        </div>
+        <div
+          un-color-primary
+          un-font="semibold"
+          un-text-xl
+        >
+          R$ {{ price }}
+        </div>
 
-      <div>
-        ou até 6x de R$ {{ priceInstallment }}
+        <div>
+          ou até 6x de R$ {{ priceInstallment }}
+        </div>
       </div>
     </div>
-  </div>
-  <div 
-    un-flex
-    un-justify-center
-    un-my-md
-    :style="`${showCartBtn ? 'opacity: 1;' : 'overflow: hidden; opacity: 0; max-height: 0;'};`"
-  >
-    <QBtn
-      class="product-item__btn-quasar"
-      label="Ver opções"
-      un-bg="primary hover:accent"
-      un-color="white"
-      no-caps
-      rounded
-      @click="updateStock()"
-    />
-  </div>
+    <div 
+      un-flex
+      un-justify-center
+      un-my-md
+      :style="`${showCartBtn ? 'opacity: 1;' : 'overflow: hidden; opacity: 0; max-height: 0;'};`"
+    >
+      <QBtn
+        class="product-item__btn-quasar"
+        label="Ver opções"
+        un-bg="primary hover:accent"
+        un-color="white"
+        no-caps
+        rounded
+        @click="updateStock()"
+      />
+    </div>
+  </RouterLink>
 </QCard>
 </template>
 

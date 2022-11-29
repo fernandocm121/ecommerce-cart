@@ -27,6 +27,7 @@ onMounted(async () => {
     un-mx-md
   >
     <ProductItem
+      :id="product._id"
       :title="product.name"
       :price="product.price"
       :src="product.src"

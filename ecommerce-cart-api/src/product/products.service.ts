@@ -71,9 +71,11 @@ export class ProductsService {
 
   async getProduct(productId: string) {
     const product = await this.findProduct(productId);
+
     if (!product) {
-      throw new NotFoundException('Could not find product.');
+      throw new NotFoundException('Could not find product');
     }
+
     return product;
   }
 
