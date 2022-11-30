@@ -48,7 +48,7 @@ const priceInstallment = computed(() => {
         un-max-w="md"
         :src="src"
       >
-      </QImg>\
+      </QImg>
     </div>
     <div 
       un-flex="~ col"

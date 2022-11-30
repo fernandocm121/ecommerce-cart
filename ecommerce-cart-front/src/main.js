@@ -2,6 +2,11 @@ import { createApp } from 'vue'
 
 import App from './App.vue'
 
+// Import Swiper styles
+import "swiper/css";
+
+import "swiper/css/pagination";
+
 import '@unocss/reset/tailwind.css'
 
 import '/src/styles/index.sass'
