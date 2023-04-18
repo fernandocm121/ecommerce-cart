@@ -31,8 +31,11 @@ export default defineConfig(({ mode }) => {
 
       // https://github.com/hannoeru/vite-plugin-pages
       Pages({
-        extensions: [ 'vue' ],
-        dirs: 'src/pages',
+        /**
+         * Paths to the directory to search for page components.
+         * @default 'src/pages'
+         */
+        dirs: [ { dir: 'src/pages', baseRoute: '' } ],
       }),
 
       // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
@@ -139,6 +142,7 @@ export default defineConfig(({ mode }) => {
       include: [
         'vue',
         'vue-router',
+        'swiper',
         '@vueuse/head',
         '@vueuse/core',
       ],

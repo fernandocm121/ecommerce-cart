@@ -71,7 +71,7 @@ let ProductsService = class ProductsService {
     async getProduct(productId) {
         const product = await this.findProduct(productId);
         if (!product) {
-            throw new common_1.NotFoundException('Could not find product.');
+            throw new common_1.NotFoundException('Could not find product');
         }
         return product;
     }
