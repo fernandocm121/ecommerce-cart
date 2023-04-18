@@ -1,10 +1,12 @@
 <script setup>
+import { priceInstallment } from '../../utils/price.js'
+
 const props = defineProps({
   imgProps: { 
     type: Object,
     default: () => ({}),
   },
-  id: Number,
+  id: String,
   src: String,
   price: Number,
   title: String
@@ -22,10 +24,6 @@ const updateStock = async () => {
   quantityStock.value = quantityStock.value - 1
   addCart()
 }
-
-const priceInstallment = computed(() => {
-  return Number(props.price / 6, 2).toFixed(2)
-})
 </script>
 
 <template>
@@ -76,7 +74,7 @@ const priceInstallment = computed(() => {
         </div>
 
         <div>
-          ou até 6x de R$ {{ priceInstallment }}
+          ou até 6x de R$ {{ priceInstallment(price) }}
         </div>
       </div>
     </div>
