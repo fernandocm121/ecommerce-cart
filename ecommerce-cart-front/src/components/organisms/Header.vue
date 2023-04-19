@@ -16,17 +16,19 @@ const { cartCounter } = useCart()
       un-w-full
       un-flex
     >
-      <div un-text="xl white">
-        <QImg
-          fit="contain"
-          src="https://static.nike.com.br/v10-0-0/images/brands/logo.svg"
-          width="60px"
-          height="60px"
-          un-max-w="md"
-        >
-        </QImg>
-        NIKE STORE
-      </div>
+      <RouterLink to="/">
+        <div un-text="xl white">
+            <QImg
+              fit="contain"
+              src="https://static.nike.com.br/v10-0-0/images/brands/logo.svg"
+              width="60px"
+              height="60px"
+              un-max-w="md"
+            >
+            </QImg>
+          NIKE STORE
+        </div>
+      </RouterLink>
       <div 
         un-flex
         un-items-center
