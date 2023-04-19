@@ -30,7 +30,6 @@ let ProductsController = class ProductsController {
         return this.productsService.getProduct(id);
     }
     async update(updateProductDto, id) {
-        const product = await this.productsService.getProduct(id);
         return await this.productsService.update(updateProductDto, id);
     }
     async delete(id) {

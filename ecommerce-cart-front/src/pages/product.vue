@@ -10,15 +10,12 @@ const route = useRoute()
 
 const id = route.params.id
 
-console.log('id', id)
 const axios = useAxios()
 
 const product = ref()
 
 onMounted(async () => {
   const { data } = await axios(`/products/${id}`, { method: 'get' });
-
-  console.log('data', data)
 
   product.value = data
 })
@@ -38,26 +35,21 @@ const quantity = ref()
     :pagination="true"
     :modules="modules"
     class="mySwiper"
-    un-h="650px"
-    un-w="650px"
+    un-h="450px"
+    un-w="450px"
     un-m="0"
   >
-    <swiper-slide>
+    <swiper-slide
+      v-for="(sourceImg, index) in product?.src"
+      :key="`source-img-${index}`"
+    >
       <QImg
         fit="contain"
         un-max-w="md"
-        :src="product?.src"
+        :src="sourceImg"
       >
       </QImg>
     </swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 4</swiper-slide>
-    <swiper-slide>Slide 5</swiper-slide>
-    <swiper-slide>Slide 6</swiper-slide>
-    <swiper-slide>Slide 7</swiper-slide>
-    <swiper-slide>Slide 8</swiper-slide>
-    <swiper-slide>Slide 9</swiper-slide>
   </swiper>
 
   <div 
