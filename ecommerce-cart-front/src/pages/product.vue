@@ -20,8 +20,6 @@ onMounted(async () => {
   product.value = data
 })
 
-const mockSizes = ['PP', 'P', 'M', 'G', '2G', '3G', '4G']
-
 const quantity = ref()
 </script>
 
@@ -69,26 +67,11 @@ const quantity = ref()
       </div>
     </div>
     <div un-font-semibold>Escolha o tamanho disponível:</div>
-    <div
-      un-flex="~ row"
-      un-space-x-sm
-    >
-      <span
-        v-for="(mockSize, index) in mockSizes"
-        un-border="1px #a5a5a5 hover:primary"
-        un-w="40px"
-        :key="`size-${index}`"
-        un-bg="hover:primary"
-        un-flex
-        un-justify-center
-        un-p-sm
-        un-rounded-md
-        un-text="hover:white"
-        un-w-fit
+      <SizeOptions 
+        un-flex="~ row"
+        un-space-x-sm
       >
-        {{ mockSize }}
-      </span>
-    </div>
+      </SizeOptions>
     <div>
       Quantidade:
       <InputText
