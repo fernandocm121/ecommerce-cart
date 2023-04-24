@@ -1,3 +1,6 @@
+const inProductionEnv = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging'
+const rulesSeverityOff = inProductionEnv ? 'warn' : 'off'
+
 module.exports = {
   extends: [
     '@antfu',
@@ -36,7 +39,10 @@ module.exports = {
       },
     ],
     'array-bracket-spacing': [ 'error', 'always' ],
+    'no-console': rulesSeverityOff,
+    'no-debugger': rulesSeverityOff,
     'max-len': 'off',
+    'antfu/top-level-function': 'off',
     'no-shadow': [ 'error', { ignoreOnInitialization: true } ],
     'no-unused-vars': [
       'error',
