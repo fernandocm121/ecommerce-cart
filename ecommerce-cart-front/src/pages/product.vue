@@ -24,7 +24,7 @@ const quantity = ref()
     un-justify-center
     un-mt-xl
   >
-    <SwiperExample :img-list="product?.src" />
+    <SwiperProduct :img-list="product?.src" />
 
     <div
       un-flex="~ col"
