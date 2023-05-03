@@ -34,30 +34,40 @@ const setThumbsSwiper = (swiper) => {
 </script>
 
 <template>
-  <div un-mr-md>
+  <div
+    un-mr-md
+    un-flex
+    class="my-swiper-teste"
+  >
     <Swiper
-      :style="{ '--swiper-navigation-color': '#fff', '--swiper-pagination-color': '#fff' }"
-      :loop="true"
+      loop
       :space-between="10"
-      :navigation="true"
-      :thumbs="{ swiper: thumbsSwiper }"
-      class="mySwiper2"
+      :slides-per-view="imgList.length"
+      free-mode
+      watch-slides-progress
+      class="mySwiper"
+      style="width: 200px;"
+      @swiper="setThumbsSwiper"
     >
       <SwiperSlide
         v-for="(sourceImg, index) in imgList"
         :key="`source-img-${index}`"
+        un-cursor-pointer
       >
-        <img :src="sourceImg">
+        <QImg
+          width="170px"
+          height="170px"
+          :src="sourceImg"
+        />
       </SwiperSlide>
     </Swiper>
     <Swiper
-      :loop="true"
+      :style="{ '--swiper-navigation-color': '#fff', '--swiper-pagination-color': '#fff' }"
+      loop
       :space-between="10"
-      :slides-per-view="imgList.length"
-      :free-mode="true"
-      :watch-slides-progress="true"
-      class="mySwiper"
-      @swiper="setThumbsSwiper"
+      navigation
+      :thumbs="{ swiper: thumbsSwiper }"
+      class="mySwiper2"
     >
       <SwiperSlide
         v-for="(sourceImg, index) in imgList"

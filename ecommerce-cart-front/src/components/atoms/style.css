@@ -8,11 +8,6 @@ body {
   padding: 0;
 }
 
-.swiper {
-  width: 500;
-  height: 100%;
-}
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -58,29 +53,30 @@ body {
 }
 
 .mySwiper2 {
-  height: 670px;
-  width: 670px;
+  height: 680px;
+  width: 680px;
   border-radius: 6px;
 }
 
 .mySwiper {
-  width: 670px;
-  height: 670px;
+  height: fit-content;
   box-sizing: border-box;
-  padding: 10px 0;
+}
+
+.mySwiper .swiper-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
 }
 
 .mySwiper .swiper-slide {
-  width: 60px;
-  height: 60px;
-  opacity: 0.4;
+  display: block;
+  width: 100% !important;
+  height: 100%;
+  object-fit: cover;
 }
 
-.mySwiper .swiper-slide-thumb-active {
-  opacity: 1;
-}
-
-.swiper-slide img {
+.mySwiper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
