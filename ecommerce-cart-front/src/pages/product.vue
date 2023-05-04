@@ -57,8 +57,10 @@ const quantity = ref()
           v-model="quantity"
           placeholder="Informe a quantidade"
           name="Quantidade"
-          :vee-rules="{ required: true }"
+          :vee-rules="{ required: true, min_value: 0 }"
           autofocus
+          type="number"
+          input-style="width: 160px;"
         />
       </div>
     </div>
