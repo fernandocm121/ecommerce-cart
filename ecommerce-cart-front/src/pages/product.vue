@@ -60,7 +60,6 @@ const quantity = ref()
           :vee-rules="{ required: true, min_value: 0 }"
           autofocus
           type="number"
-          input-style="width: 160px;"
         />
       </div>
     </div>
