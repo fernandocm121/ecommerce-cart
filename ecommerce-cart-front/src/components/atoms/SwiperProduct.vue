@@ -9,8 +9,6 @@ import 'swiper/css/free-mode'
 import 'swiper/css/navigation'
 import 'swiper/css/thumbs'
 
-import './style.css'
-
 // import Swiper core and required modules
 import SwiperCore, {
   FreeMode, Navigation, Thumbs,
@@ -37,16 +35,16 @@ const setThumbsSwiper = (swiper) => {
   <div
     un-mr-md
     un-flex
-    class="my-swiper-teste"
+    class="swiper-product"
   >
     <Swiper
-      loop
+      class="my-swiper"
+      style="width: 170px;"
       :space-between="10"
       :slides-per-view="imgList.length"
       free-mode
       watch-slides-progress
-      class="mySwiper"
-      style="width: 200px;"
+      loop
       @swiper="setThumbsSwiper"
     >
       <SwiperSlide
@@ -62,12 +60,13 @@ const setThumbsSwiper = (swiper) => {
       </SwiperSlide>
     </Swiper>
     <Swiper
+      un-h-680px
+      un-w-680px
+      un-rounded-md
       :style="{ '--swiper-navigation-color': '#fff', '--swiper-pagination-color': '#fff' }"
-      loop
       :space-between="10"
-      navigation
       :thumbs="{ swiper: thumbsSwiper }"
-      class="mySwiper2"
+      loop
     >
       <SwiperSlide
         v-for="(sourceImg, index) in imgList"
@@ -78,3 +77,14 @@ const setThumbsSwiper = (swiper) => {
     </Swiper>
   </div>
 </template>
+
+<style lang="sass">
+.my-swiper
+  height: fit-content
+  box-sizing: border-box
+
+.my-swiper .swiper-wrapper
+  display: flex
+  flex-direction: column
+  width: 170px
+</style>
