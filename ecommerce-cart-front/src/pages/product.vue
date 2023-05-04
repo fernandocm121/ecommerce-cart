@@ -1,9 +1,5 @@
 <script setup>
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Pagination } from 'swiper'
 import { priceInstallment } from '../utils/price.js'
-
-const modules = [ Pagination ]
 
 const route = useRoute()
 
@@ -28,25 +24,7 @@ const quantity = ref()
     un-justify-center
     un-mt-xl
   >
-    <Swiper
-      :pagination="true"
-      :modules="modules"
-      class="mySwiper"
-      un-h="450px"
-      un-w="450px"
-      un-m="0"
-    >
-      <SwiperSlide
-        v-for="(sourceImg, index) in product?.src"
-        :key="`source-img-${index}`"
-      >
-        <QImg
-          fit="contain"
-          un-max-w="md"
-          :src="sourceImg"
-        />
-      </SwiperSlide>
-    </Swiper>
+    <SwiperProduct :img-list="product?.src" />
 
     <div
       un-flex="~ col"
