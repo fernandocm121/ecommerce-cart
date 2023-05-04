@@ -1,18 +1,7 @@
 <script setup>
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
-// Import Swiper styles
-import 'swiper/css'
-
-import 'swiper/css/free-mode'
-import 'swiper/css/navigation'
-import 'swiper/css/thumbs'
-
-// import Swiper core and required modules
-import SwiperCore, {
-  FreeMode, Navigation, Thumbs,
-} from 'swiper'
+import SwiperCore, { FreeMode, Thumbs } from 'swiper'
 
 defineProps({
   imgList: {
@@ -22,7 +11,7 @@ defineProps({
 })
 
 // install Swiper modules
-SwiperCore.use([ FreeMode, Navigation, Thumbs ])
+SwiperCore.use([ FreeMode, Thumbs ])
 
 const thumbsSwiper = ref(null)
 
@@ -63,7 +52,6 @@ const setThumbsSwiper = (swiper) => {
       un-h-680px
       un-w-680px
       un-rounded-md
-      :style="{ '--swiper-navigation-color': '#fff', '--swiper-pagination-color': '#fff' }"
       :space-between="10"
       :thumbs="{ swiper: thumbsSwiper }"
       loop

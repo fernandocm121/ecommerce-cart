@@ -5,9 +5,9 @@ import App from './App.vue'
 import { applyPlugins } from '@/src/plugins'
 
 // Import Swiper styles
-import "swiper/css";
+import 'swiper/css'
 
-import "swiper/css/pagination";
+import 'swiper/css/pagination'
 
 import '@unocss/reset/tailwind.css'
 
