@@ -62,6 +62,8 @@ const quantity = ref()
           type="number"
         />
       </div>
+      <MBtn label="Comprar Agora" />
+      <MBtn label="Adicionar ao carrinho" />
     </div>
   </div>
 </template>
